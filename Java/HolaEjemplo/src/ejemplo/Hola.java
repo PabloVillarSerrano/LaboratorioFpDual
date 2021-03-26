@@ -2,6 +2,6 @@ package ejemplo;
 
 public class Hola {
 
-	public static voi
+//	public static voi
 	
 }

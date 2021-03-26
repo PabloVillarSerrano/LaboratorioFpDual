@@ -21,7 +21,8 @@ public class Eje1 {
 //		int[] array = new int[tam];
 		
 		List<Integer> numeros = Arrays.asList(6,5,4);
-				
+		List<Integer> numeros2 = Arrays.asList(7,5,4);
+
 //		System.out.println("Introduce los 10 numeros del array");
 		
 //		for (int i=0; i<array.length; i++) {
