@@ -1,0 +1,13 @@
+package herencia;
+
+public class EjemploFinal {
+	
+	private final String ejemplo;
+	
+	public EjemploFinal(String ejemplo) {
+		this.ejemplo=ejemplo;
+	}
+	
+	
+
+}

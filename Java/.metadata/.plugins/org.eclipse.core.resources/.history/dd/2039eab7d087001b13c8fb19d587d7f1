@@ -1,0 +1,12 @@
+package herencia2;
+
+public class Empleado {
+	
+	String nomApe;
+	String cedula;
+	//Tendrá que estar entre 18 y 45
+	int edad;
+	boolean casado;
+	double salario;
+
+}

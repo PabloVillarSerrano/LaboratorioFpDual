@@ -1,0 +1,26 @@
+package herencia;
+
+public class SegundoBoton extends AbstractBoton implements EventoRaton{
+
+	public SegundoBoton(String nombreBoton) {
+		super.nombreBoton = nombreBoton;
+	}
+	
+	@Override
+	public void llenarCampo(String campo) {
+		System.out.println("llenando campo: "+campo);
+	}
+	
+	@Override
+	public void cierraPantalla() {
+		System.out.println("cerrando pantalla");
+	}
+	
+	@Override
+	public void registrarLog() {
+		System.out.println("registrando en el log...");
+	}
+	
+	
+	
+}

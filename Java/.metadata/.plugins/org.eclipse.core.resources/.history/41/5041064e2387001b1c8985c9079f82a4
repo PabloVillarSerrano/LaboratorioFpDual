@@ -1,0 +1,14 @@
+package herencia;
+
+public class Boton extends AbstractBoton implements EventoPantalla, EventoRaton{
+
+	public Boton(String nombreBoton) {
+		super.nombreBoton = nombreBoton;
+	}
+	
+	@Override
+	public void llenarCampo(String campo) {
+		System.out.println("llenando campo: "+campo);
+	}
+	
+}

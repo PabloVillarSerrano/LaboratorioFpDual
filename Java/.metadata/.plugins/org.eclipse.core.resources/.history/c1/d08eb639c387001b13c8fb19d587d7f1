@@ -1,0 +1,20 @@
+package herencia1;
+
+import java.util.Date;
+
+public class ProdRefrig extends Producto {
+	
+	String tiempoFresc;
+
+	public ProdRefrig(Date caducidad, String nLote, String nombreProd, String tiempoFresc) {
+		super(caducidad, nLote, nombreProd);
+		this.tiempoFresc=tiempoFresc;
+	}
+	
+	public void imprimirProd() {
+		System.out.println("Producto " +super.nombreProd+ " del lote " +super.getnLote()+
+				"\n y tiempo fresco " +tiempoFresc);
+	}
+	
+
+}

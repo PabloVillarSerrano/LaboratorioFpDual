@@ -1,0 +1,11 @@
+package herencia;
+
+public class HerenciaAbstract extends ClaseAbstracta{
+
+	@Override
+	public void imprimirAbstract() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

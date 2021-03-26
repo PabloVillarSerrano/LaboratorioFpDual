@@ -1,0 +1,24 @@
+package herencia2;
+
+public class Empleado {
+	
+	String nomApe;
+	String cedula;
+	//Tendrá que estar entre 18 y 45
+	int edad;
+	boolean casado;
+	double salario;
+	
+	
+	//Constructor con parametros de entrada
+	public Empleado(String nomApe, String cedula, int edad, boolean casado, double salario) {
+		super();
+		this.nomApe = nomApe;
+		this.cedula = cedula;
+		this.edad = edad;
+		this.casado = casado;
+		this.salario = salario;
+	}
+
+	
+}

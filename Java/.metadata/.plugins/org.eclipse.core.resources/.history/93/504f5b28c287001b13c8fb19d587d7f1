@@ -1,0 +1,16 @@
+package herencia1;
+
+import java.util.Date;
+
+public class ProdCong extends Producto {
+	
+	String tempRec;
+
+	public ProdCong(String caducidad, Date nLote, String nombreProd, String tempRec) {
+		super(caducidad, nLote, nombreProd);
+		this.tempRec=tempRec;
+	}
+	
+	
+
+}

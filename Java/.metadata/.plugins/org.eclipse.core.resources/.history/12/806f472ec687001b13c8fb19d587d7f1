@@ -1,0 +1,17 @@
+package herencia1;
+
+import java.util.Date;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		ProdCong pc = new ProdCong(Date.from(null), "0001", "prodcong1");
+		
+		
+		
+		pc.imprimirProd();
+
+	}
+
+}

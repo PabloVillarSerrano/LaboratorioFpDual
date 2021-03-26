@@ -1,0 +1,13 @@
+package herencia2;
+
+public class Test {
+
+	public static void main(String[] args) {
+
+		Empleado e1 = new Programador();
+		Empleado e2 = new Programador("Pablo Villar", "1234567G", 25, false, 1000, 60, "JAVA");
+
+		
+	}
+
+}

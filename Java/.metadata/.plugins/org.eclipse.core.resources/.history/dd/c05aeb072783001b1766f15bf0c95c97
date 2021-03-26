@@ -1,0 +1,21 @@
+package logica;
+
+import java.util.Scanner;
+
+public class Eje2 {
+
+
+	
+	public static void main(String[] args){
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Escribe el nombre del alumno");
+		
+		String alumno = sc.nextLine();
+
+		System.out.println("Alumno: " +alumno);
+		
+		
+	}
+}

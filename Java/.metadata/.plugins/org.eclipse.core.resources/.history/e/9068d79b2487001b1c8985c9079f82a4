@@ -1,0 +1,17 @@
+package herencia;
+
+public class MainBoton {
+
+	public static final String CONSTANTE= "A";
+
+	public static void main(String[] args) {
+		
+		PrimerBoton primerBoton = new PrimerBoton("Primer");
+		SegundoBoton segundoBoton = new SegundoBoton("Segundo");
+		BotonSubmit botonSubmit = new BotonSubmit("Submit");
+
+		
+
+	}
+
+}

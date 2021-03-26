@@ -1,0 +1,11 @@
+package herencia;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		ProdCong pc = new ProdCong("2016-10-20", "0001", "prodcong1");
+
+	}
+
+}

@@ -1,0 +1,28 @@
+package herencia1;
+
+import java.util.Date;
+
+public class ProdRefrig extends Producto {
+	
+	String empresaRefrig;
+
+	public ProdRefrig(Date caducidad, String nLote, String nombreProd, String empresaRefrig) {
+		super(caducidad, nLote, nombreProd);
+		this.empresaRefrig=empresaRefrig;
+	}
+	
+	public void imprimirProd() {
+		System.out.println("Producto " +super.nombreProd+ " del lote " +super.getnLote()+
+				"\n y empresa refrigeradora " +empresaRefrig);
+	}
+
+	public String getEmpresaRefrig() {
+		return empresaRefrig;
+	}
+
+	public void setEmpresaRefrig(String empresaRefrig) {
+		this.empresaRefrig = empresaRefrig;
+	}
+	
+
+}

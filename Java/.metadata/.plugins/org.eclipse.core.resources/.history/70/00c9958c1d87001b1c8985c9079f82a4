@@ -1,0 +1,22 @@
+package herencia;
+
+public class MainAbs {
+
+	public static void main(String[] args) {
+		
+		ClaseAbstracta clase = new HerenciaAbstract();
+		HerenciaAbstract clase2 = new HerenciaAbstract();
+
+
+		//De claseAbstracta
+		clase.imprimir();
+		//De herenciaAbstract
+		clase.imprimirAbstract();
+		System.out.println("\n===========\n");
+
+		clase2.imprimir();
+		clase2.imprimirAbstract();
+		
+	}
+
+}

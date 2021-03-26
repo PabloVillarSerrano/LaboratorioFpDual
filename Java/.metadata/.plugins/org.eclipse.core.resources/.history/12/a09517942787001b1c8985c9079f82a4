@@ -1,0 +1,22 @@
+package herencia;
+
+public class BotonSubmit extends AbstractBoton implements EventoRaton, EventoSubmitFormulario{
+
+	public BotonSubmit(String nombreBoton) {
+		super.nombreBoton = nombreBoton;
+	}
+	
+	@Override
+	public void llenaCampo(String campo) {
+		System.out.println("llenando campo: "+campo);
+	}
+	@Override
+	public void llenaCampo(String campo) {
+		System.out.println("llenando campo: "+campo);
+	}
+	
+
+	
+	
+	
+}

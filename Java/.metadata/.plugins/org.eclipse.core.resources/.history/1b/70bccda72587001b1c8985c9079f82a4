@@ -1,0 +1,8 @@
+package herencia;
+
+public class AbstractBoton {
+	
+	protected String nombreBoton;
+	
+
+}

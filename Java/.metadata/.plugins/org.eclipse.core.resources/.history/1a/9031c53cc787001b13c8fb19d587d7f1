@@ -1,0 +1,21 @@
+package herencia1;
+
+import java.util.Date;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		ProdCong pc = new ProdCong("pasado", "0001", "prodcong1");
+		ProdFresc pf = new ProdFresc("el jueves ", "0001", "prodcong1", "Esp");
+		ProdRefrig pr = new ProdRefrig("en 3 dias", "0001", "prodcong1", "Acc");
+
+		
+		pc.imprimirProd();
+		pf.imprimirProd();
+		pr.imprimirProd();
+
+
+	}
+
+}

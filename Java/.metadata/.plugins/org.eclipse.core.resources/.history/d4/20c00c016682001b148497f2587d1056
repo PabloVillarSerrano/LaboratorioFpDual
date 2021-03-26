@@ -1,0 +1,28 @@
+
+//BigDecimal coge los numeros mas grandes que double y float 
+import java.math.BigDecimal;
+
+
+public class Hola{
+	public static void main(String[] args){
+		
+		System.out.println("Hola dia 1");
+		
+		//tipos de datos
+		
+		int a=5;
+		Integer b=5;
+		
+		short c=5, j=6;
+		short k,i;
+		
+		float d= 5.5f;
+		
+		Double e=5.5;
+		double f=5.5;
+		
+		
+	}
+
+
+}

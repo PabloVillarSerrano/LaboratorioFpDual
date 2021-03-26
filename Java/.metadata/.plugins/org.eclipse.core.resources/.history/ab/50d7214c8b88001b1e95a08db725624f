@@ -1,0 +1,30 @@
+package arrays1;
+
+/**
+ * EUC  que contenga un método que reciba un arreglo tipo int y que retorne 
+ * true (verdadero) si en la primera o en la última posición hay un 6, 
+ * y falso (false) si no.
+ * @author pablo.villar.serrano
+ *
+ */
+public class Eje1 {
+
+	public static void main(String[] args) {
+		
+		int tam = 10;
+		
+		int[] array = new int[tam];
+		
+		System.out.println("Introduce los 10 numeros del array");
+		
+		for (int i : array ) {
+			
+			array[i]=s
+		}
+
+	}
+	public boolean comprobar() {
+		return true;
+	}
+
+}
