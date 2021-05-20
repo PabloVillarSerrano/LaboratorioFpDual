@@ -1,2 +1,2 @@
-# LaboratorioFpDual
-Espacio de pruebas para FP Dual
+# Proyecto ERP Acceture
+Proyecto de ERP de empleados para Accenture
