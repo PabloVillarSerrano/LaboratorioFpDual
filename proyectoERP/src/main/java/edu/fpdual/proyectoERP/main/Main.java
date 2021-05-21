@@ -4,58 +4,39 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 import edu.fpdual.proyectoERP.conector.Conector;
-import edu.fpdual.proyectoERP.manager.EmployeesManager;
+import edu.fpdual.proyectoERP.manager.CustomerManagerC;
 
 public class Main {
 
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
-		//Connects to the DB
+		// Connects to the DB
 		Connection con = new Conector().getMySQLConnection();
-		
 		try {
-			
-			//IMPRIME: erp2 
-			//System.out.println(con.getCatalog());
-			 		
-			//BUSCAR TODOS LOS EMPLEADOS MOSTRAR TODOS SUS DATOS 
-			System.out.println(new EmployeesManager().findAll(con));
-			
-			//BUSCAR LOS EMPLEADOS DE LAS CIUDADES QUE EMPIECEN POR...
-			//new EmployeesManager().findAllByNameStartingWith(con, "B").forEach(employees ->System.out.println(employees));
-			 
-			
-			//PARA BUSCAR POR NOMBRE
-			//System.out.println(new CityManager().FindName(con, "Bolton"));	
-			
-			//PARA BUSCAR POR ID
-			//System.out.println(new CityManager().findID(con, 500));
-			
-			//PARA MODIFICAR LA POBLACION DE UNA CIUDAD TENIENDO SU ID
-			//System.out.println(new CityManager().findID(con, 500));
-			//new CityManager().update(con, 500, new BigDecimal("100000"));
-			//System.out.println(new CityManager().findID(con, 500));
-			
-			
-			//PARA INSERTAR UNA CIUDAD ( NO FUNCIONA )		
-			
-//			new CityManager().insert(con, "ciudadInvent", "distritoInvent" , new BigDecimal("100000"));
-//			new CityManager().findAllByNameStartingWith(con, "ciudadIn").forEach(city ->System.out.println(city));
-			
-//			new CityManager().insert(con);
-//			System.out.println(new CityManager().findID(con, 70000));
-			
-			
-			//PARA BORRAR CIUDADES POR ID
-			//new CityManager().delete(con, 500);
-	 
-		}
-		finally {
+			// Looks for all the cities in the DB and prints them.
+			// new CityManager().findAll(con).forEach(city ->System.out.println(city));
+			System.out.println(con.getCatalog());
+
+//			ADD CUSTOMERS
+//			new CustomerManagerC().addCustomer(con,30,"Accenture", "Bravo", "Victoria");
+//			DELETE CUSTOMERS
+			new CustomerManagerC().deleteCustomer(con, 30);
+//			CUSTOMERS COMPLETE LIST
+			new CustomerManagerC().findAll(con).forEach(customer -> System.out.println(customer));
+
+//			ADD ORDER
+//			new OrderManager().addOrder(con,29,30,27,"2006-01-15 00:00:00");
+//			DELETE ORDER
+//			new OrderManager().deleteOrder(con, 29);
+//			ORDERS COMPLETE LIST
+//			new OrderManager().findAll(con).forEach(order -> System.out.println(order));
+
+		} finally {
 			try {
 				con.close();
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
 		}
-	}
 
+	}
 }

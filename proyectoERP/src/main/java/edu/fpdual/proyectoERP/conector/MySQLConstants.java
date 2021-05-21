@@ -1,10 +1,5 @@
 package edu.fpdual.proyectoERP.conector;
 
-/**
- * MySQL Constants class.
- * @author pablo villar serrano
- *
- */
 public class MySQLConstants {
 
 	public static final String PASSWD = "jdbc.mysql.passwd";
@@ -15,5 +10,5 @@ public class MySQLConstants {
 	public static final String URL_PORT = "jdbc.mysql.url.port";
 	public static final String URL_SCHEMA = "jdbc.mysql.url.schema";
 	public static final String URL_SSL = "jdbc.mysql.url.ssl";
-	
+
 }
