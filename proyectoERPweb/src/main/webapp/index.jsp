@@ -13,94 +13,171 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 	<!-- MDBootstrap -->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.min.css" rel="stylesheet">
+	<style>
+		.botoncta{
+		  background-image: linear-gradient(#f6b83f,#f6b83f);
+		  font-family: 'roboto', sans-serif;
+		  line-height: 1;
+		  letter-spacing: 0.05em;
+		  color: #fff8e1 ;
+		  font-weight: bold;
+		  font-size: 16px;
+		  border-radius: 25px;
+		}
+		.botoncta:hover{
+		  background-image: linear-gradient(#e28b3a,#e28b3a);
+		  font-family: 'roboto', sans-serif;
+		  line-height: 1;
+		  letter-spacing: 0.05em;
+		  color: #fff8e1 ;
+		  font-weight: bold;
+		  font-size: 16px;
+		  border-radius: 25px;
+		}
+		.botoncta2{
+		  background-image: linear-gradient(#3299ba,#3299ba);
+		  font-family: 'roboto', sans-serif;
+		  line-height: 1;
+		  letter-spacing: 0.05em;
+		  color: #fff8e1 ;
+		  font-weight: bold;
+		  font-size: 16px;
+		  border-radius: 25px;
+		}
+		.botoncta2:hover{
+		  background-image: linear-gradient(#1c7796,#1c7796);
+		  font-family: 'roboto', sans-serif;
+		  line-height: 1;
+		  letter-spacing: 0.05em;
+		  color: #fff8e1 ;
+		  font-weight: bold;
+		  font-size: 16px;
+		  border-radius: 25px;
+		}
+</style>
 </head>
 
 	<body style="background-color: #fff8e1;">
 
 
 	<!-- NAV PC -->
-	 <nav class="navbar fixed-top ocultarpc" style="background-image: linear-gradient(to right,#ed8323,#ed8323); box-shadow: 0px 0px 0px 0px grey; padding: 0rem 0rem 0rem 0rem; ">
+	 <nav class="navbar py-2 fixed-top ocultarpc" style="background-image: linear-gradient(to right,#ed8323,#ed8323); box-shadow: 0px 0px 0px 0px grey; padding: 0rem 0rem 0rem 0rem; ">
 	    
 	  <div class="col-md-3 pl-3" >
 	    <ul class="nav justify-content-left  lighten-4">
 	      <li class="nav-item">
-	        <a href="https://www.royalsheepgroup.com" >
-	        <img src="logos positivo-08.png" class="img-fluid py-1"  style="width: 45%; ">
-	        </a>
-	      </li>
-	    </ul>
-	  </div>
-	   <div class="col-md-8" >
-	    <ul class="nav justify-content-end  lighten-4 py-2 pr-2">
-	      <li class="nav-item">
-	        <a href="https://www.royalsheepgroup.com/juego" style="color:#fff">
+	        <a href="http://localhost:8080/proyectoERPweb/index.jsp" style="color:#fff">
 	          <button type="button" class="btn botoncta2 btn-rounded" > 
-	            COMPRAR
+	            INICIO
 	          </button>
 	        </a>
 	      </li>
 	    </ul>
-	   </div>
-	
-	   <button class="navbar-toggler second-button pr-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent23"
-	   aria-controls="navbarSupportedContent23" aria-expanded="false" aria-label="Toggle navigation">
-	   <div class="animated-icon2"><span></span><span></span><span></span><span></span></div>
-	   </button>
-	
-	   <div class="collapse navbar-collapse" id="navbarSupportedContent23" style="padding-top: 10em; padding-bottom: 10em; background-image: linear-gradient(to right,#fff,#fff);">
-	    <ul class="navbar-nav mr-auto " style="padding-left: 6em;">
-	      <li class="nav-item ">
-	        <a class="navgenACTIVE py-2" style="color:#fff8e1; font-size: 2.8em;" href="https://www.pvillarserrano.com/">Inicio</a>
+	  </div>
+	   <div class="col-md-9" >
+	    <ul class="nav justify-content-end  lighten-4 py-2 pr-2">
+	      <li class="nav-item mx-3">
+	        <a href="http://localhost:8080/proyectoERPweb/filterEmpleados.jsp" style="color:#fff">
+	            EMPLEADOS
+	        </a>
 	      </li>
-	      <li class="nav-item">
-	        <a class="navgen py-2" style="color:#fff8e1; font-size: 2.8em;" href="https://www.royalsheepgroup.com/">Battle of Chefs</a>
+   	     <li class="nav-item mx-3">
+	        <a href="http://localhost:8080/proyectoERPweb/filterClientes.jsp" style="color:#fff">
+	            CLIENTES
+	        </a>
 	      </li>
-	      <li class="nav-item">
-	        <a class="navgen py-2"style="color:#fff8e1; font-size: 2.8em;"  href="https://www.royalsheepgroup.com/">Conócenos</a>
-	      </li>
-	      <li class="nav-item active">
-	        <a class="navgen py-2" style="color:#fff8e1; font-size: 2.8em;" href="https://www.royalsheepgroup.com/">Contacto</a>
+	      <li class="nav-item mx-3">
+	        <a href="https://www.royalsheepgroup.com/juego" style="color:#fff">
+	            PRODUCTOS
+	        </a>
 	      </li>
 	    </ul>
-	  </div>
-	
+	   </div>
 	  </nav>
 	
 	<main>
 		<section class="section py-5" >
 		
-			<div class="p-4 text-center" style="text-align: center; font-family: 'Pattaya', sans-serif;">
-				<span style="font-size: 4em; color: #ed8323">Empleados</span>
+			<div class="pt-5 text-center" style="text-align: center; font-family: 'Pattaya', sans-serif;">
+				<span style="font-size: 4em; color: #ed8323">¿Qué quieres consultar?</span>
 			</div>
-			<div class="" style="text-align: center">
-			   <table border = "1" style="margin: auto">
-			       <thead style="font-family: 'Pattaya', sans-serif; color: #ed8323" >
-			           <tr>
-			               <th class="px-4 py-2" style="font-size: 1.5em;">Id</th>
-			               <th class="px-4 py-2" style="font-size: 1.5em;">Compañía</th>
-			               <th class="px-4 py-2" style="font-size: 1.5em;">Ciudad</th>
-			           </tr>
-			       </thead>
-			        <%
-			           Connection con = new Conector().getMySQLConnection();
-			           List<Employees>list=new EmployeesManager().findAll(con);
-			        %> 
-			       <tbody>
-			       
-			       <% for(Employees emp:list){ %>
-			       
-			           <tr>
-			               <td><%= emp.getId()%></td>
-			               <td><%= emp.getCompany()%></td>
-			               <td><%= emp.getCity()%></td>
-			           </tr>
-			           <%}%>
-			       </tbody>
-			   </table> 
-		   </div>
 		
+			<div class="p-5 row row-cols-1 row-cols-md-3 g-4 m-0">
+			  <div class="col">
+			    <div class="card h-100">
+			      <img
+			        src="https://pvillarserrano.com/recursos/empleados.png"
+			        class="card-img-top"
+			        alt="..."
+			      />
+			      <div class="card-body">
+			        <h5 class="card-title">EMPLEADOS</h5>
+			        <p class="card-text">
+			          Esta tabla contiene id, compañía, ciudad, nombre e email de los emppleados.
+			        </p>
+			      </div>
+			      <div class="card-footer">
+			        <a href="http://localhost:8080/proyectoERPweb/filterEmpleados.jsp" style="color:#fff">
+			          <button type="button" class="btn botoncta btn-rounded" > 
+			            VER MÁS
+			          </button>
+			        </a>
+   			      </div>
+			    </div>
+			  </div>
+			  <div class="col">
+			    <div class="card h-100">
+			      <img
+			        src="https://pvillarserrano.com/recursos/empleados.png"
+			        class="card-img-top"
+			        alt="..."
+			      />
+			      <div class="card-body">
+			        <h5 class="card-title">EMPRESAS</h5>
+			        <p class="card-text">
+			          This card has supporting text below as a natural lead-in to additional
+			          content.
+			        </p>
+			      </div>
+			      <div class="card-footer">
+			        <a href="http://localhost:8080/proyectoERPweb/filterEmpleados.jsp" style="color:#fff">
+			          <button type="button" class="btn botoncta btn-rounded" > 
+			            VER MÁS
+			          </button>
+			        </a>
+			        </div>
+			    </div>
+			  </div>
+			  <div class="col">
+			    <div class="card h-100">
+			      <img
+			        src="https://pvillarserrano.com/recursos/empleados.png"
+			        class="card-img-top"
+			        alt="..."
+			      />
+			      <div class="card-body">
+			        <h5 class="card-title">PRODUCTOS</h5>
+			        <p class="card-text">
+			          This is a wider card with supporting text below as a natural lead-in to
+			          additional content. This card has even longer content than the first to show
+			          that equal height action.
+			        </p>
+			      </div>
+			      <div class="card-footer">
+			        <a href="http://localhost:8080/proyectoERPweb/filterEmpleados.jsp" style="color:#fff">
+			          <button type="button" class="btn botoncta btn-rounded" > 
+			            VER MÁS
+			          </button>
+			        </a>
+			        </div>
+			    </div>
+			  </div>
+			</div>
 		
 		</section>
+		
+
+		
 	</main>
 
 	<!--  SCRIPTS  -->
