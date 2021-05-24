@@ -87,8 +87,8 @@
 	        </a>
 	      </li>
 	      <li class="nav-item mx-3">
-	        <a href="https://www.royalsheepgroup.com/juego" style="color:#fff">
-	            PRODUCTOS
+	        <a href="http://localhost:8080/proyectoERPweb/filterPedidos.jsp" style="color:#fff">
+	            PEDIDOS
 	        </a>
 	      </li>
 	    </ul>
@@ -113,7 +113,7 @@
 			      <div class="card-body">
 			        <h5 class="card-title">EMPLEADOS</h5>
 			        <p class="card-text">
-			          Esta tabla contiene id, compañía, ciudad, nombre e email de los emppleados.
+			          Esta tabla contiene id, compañía, ciudad, nombre e email de los empleados.
 			        </p>
 			      </div>
 			      <div class="card-footer">
@@ -133,14 +133,13 @@
 			        alt="..."
 			      />
 			      <div class="card-body">
-			        <h5 class="card-title">EMPRESAS</h5>
+			        <h5 class="card-title">CLIENTES</h5>
 			        <p class="card-text">
-			          This card has supporting text below as a natural lead-in to additional
-			          content.
+			          Esta tabla contiene id, compañía, nombre y apellido de los clientes.
 			        </p>
 			      </div>
 			      <div class="card-footer">
-			        <a href="http://localhost:8080/proyectoERPweb/filterEmpleados.jsp" style="color:#fff">
+			        <a href="http://localhost:8080/proyectoERPweb/filterClientes.jsp" style="color:#fff">
 			          <button type="button" class="btn botoncta btn-rounded" > 
 			            VER MÁS
 			          </button>
@@ -156,15 +155,13 @@
 			        alt="..."
 			      />
 			      <div class="card-body">
-			        <h5 class="card-title">PRODUCTOS</h5>
+			        <h5 class="card-title">PEDIDOS</h5>
 			        <p class="card-text">
-			          This is a wider card with supporting text below as a natural lead-in to
-			          additional content. This card has even longer content than the first to show
-			          that equal height action.
+			          Esta tabla contiene id, compañía, nombre y apellido de los clientes.
 			        </p>
 			      </div>
 			      <div class="card-footer">
-			        <a href="http://localhost:8080/proyectoERPweb/filterEmpleados.jsp" style="color:#fff">
+			        <a href="http://localhost:8080/proyectoERPweb/filterPedidos.jsp" style="color:#fff">
 			          <button type="button" class="btn botoncta btn-rounded" > 
 			            VER MÁS
 			          </button>

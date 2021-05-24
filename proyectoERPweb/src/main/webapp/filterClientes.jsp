@@ -69,8 +69,8 @@
 	        </a>
 	      </li>
 	      <li class="nav-item mx-3">
-	        <a href="https://www.royalsheepgroup.com/juego" style="color:#fff">
-	            PRODUCTOS
+	        <a href="http://localhost:8080/proyectoERPweb/filterPedidos.jsp" style="color:#fff">
+	            PEDIDOS
 	        </a>
 	      </li>
 	    </ul>
@@ -125,7 +125,7 @@
    			               <td><%= cust.getFirstName()%></td>
 			               <td><%= cust.getLastName()%></td>		
 						   <td>
-						   	<a href="delete.jsp?id= <%=cust.getCustomerId() %>">
+						   	<a href="deleteCust.jsp?id= <%=cust.getCustomerId() %>">
 						   		<button type="button" class="delete">Delete</button>
 						   	</a>
 						   </td>               
@@ -134,7 +134,16 @@
 			           <%}%>
 			       </tbody>
 			   </table> 
-			   			   
+			   
+			   <div class="pt-4">
+				  <form  name="addCust" action="addCust.jsp" method="GET">
+				   <label class="px-2"> Id </label><input type="text" name=CustomerId value=""/> 
+				   <label class="px-2"> Compañia </label><input type="text" name="Company" value=""/>
+	   			   <label class="px-2"> Nombre </label><input type="text" name="FirstName" value=""/>
+	   			   <label class="px-2"> Apellido </label><input type="text" name="LastName" value=""/>
+				    <input type="submit" value="Enter Values"/>
+				  </form>
+			  </div>	   
 			   
 			   
 		   </div>
@@ -142,7 +151,7 @@
 		
 		
 
-		<div>			
+		<div style="padding-left: 2%;">			
 		<%! private int contador = 0; %>
 			<p>Número de veces que se ha visitado esta página desde que se
 			arrancó el servidor:
