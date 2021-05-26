@@ -2,22 +2,39 @@
 <%@page import="java.sql.*,java.util.*"%>
 <%@page import="edu.fpdual.proyectoERP.conector.Conector"%>
 <%@page import="java.sql.Connection"%>
-<%@page import="edu.fpdual.proyectoERP.dao.Employees"%>
-<%@page import= "edu.fpdual.proyectoERP.manager.EmployeesManager" %>
+<%@page import="edu.fpdual.proyectoERP.dao.Order"%>
+<%@page import= "edu.fpdual.proyectoERP.manager.OrderManager" %>
 
 
-<%String id=request.getParameter("id");
+<% 
+String t1 = request.getParameter("OrderID");
+int id1 = Integer.parseInt(t1);
+String t2 = request.getParameter("EmployeeID");
+int id2 = Integer.parseInt(t2);
+String t3 = request.getParameter("CustomerID");
+int id3 = Integer.parseInt(t3);
+String t4 = request.getParameter("OrderDate");
+
 Connection con = new Conector().getMySQLConnection();
-try (PreparedStatement prepStmt = con.prepareStatement("DELETE FROM Employees WHERE ID="+id)) {
+
+try (PreparedStatement prepStmt = con.prepareStatement("UPDATE Orders SET EmployeeID = ?, CustomerID = ? , OrderDate= ? WHERE OrderID = ?")) 
+
+{
 	con.setAutoCommit(false);
+	prepStmt.setInt(1, id2);
+	prepStmt.setInt(2, id3);
+	prepStmt.setString(3, t4);
+	prepStmt.setInt(4, id1);
+	
 	prepStmt.executeUpdate();
 	con.commit();
-
 } catch (SQLException e) {
-	e.printStackTrace();
 
+e.printStackTrace();
 }
-%>					
+%>	
+
+		
 <html>
 <head>
 	<!-- Fuentes -->
@@ -91,14 +108,30 @@ try (PreparedStatement prepStmt = con.prepareStatement("DELETE FROM Employees WH
 	
 	<main>
 
-		<section class="section py-5" >
-			<div class="pt-5 text-center" style="text-align: center; font-family: 'Pattaya', sans-serif;">
-				<span style="font-size: 4em; color: #ed8323">¡Borrado con éxito!</span>
+		<section class="mt-5 section text-center py-5" >
+			<div class="pt-5 " style="text-align: center; font-family: 'Pattaya', sans-serif;">
+				<span style="font-size: 4em; color: #ed8323">¡Pedido modificado!</span>
 			</div>	
+			
+			
+			<p><b>Id Pedido:</b>
+			   <%= request.getParameter("OrderID")%>
+			</p>
+			<p><b>Id Empleado:</b>
+			   <%= request.getParameter("EmployeeID")%>
+			</p>
+				<p><b>Id Cliente:</b>
+			   <%= request.getParameter("CustomerID")%>
+			</p>
+				<p><b>Fecha:</b>
+			   <%= request.getParameter("OrderDate")%>
+			</p>
+			
+			
 		</section>	
 	    <section class="section py-5" >
-			<div class="pt-5 text-center" style="text-align: center; font-family: 'Pattaya', sans-serif;">
-				<a href="http://localhost:8080/proyectoERPweb/filterEmpleados.jsp" style="color:#fff">
+			<div class="text-center" style="text-align: center; font-family: 'Pattaya', sans-serif;">
+				<a href="filterPedidos.jsp" style="color:#fff">
 		          <button type="button" class="btn botoncta2 btn-rounded" > 
 		            Volver al listado
 		          </button>

@@ -85,8 +85,8 @@ try (PreparedStatement prepStmt = con.prepareStatement("DELETE FROM Customers WH
 	        </a>
 	      </li>
 	      <li class="nav-item mx-3">
-	        <a href="https://www.royalsheepgroup.com/juego" style="color:#fff">
-	            PRODUCTOS
+	        <a href="http://localhost:8080/proyectoERPweb/filterPedidos.jsp" style="color:#fff">
+	            PEDIDOS
 	        </a>
 	      </li>
 	    </ul>

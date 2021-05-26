@@ -157,7 +157,7 @@
 			      <div class="card-body">
 			        <h5 class="card-title">PEDIDOS</h5>
 			        <p class="card-text">
-			          Esta tabla contiene id, compañía, nombre y apellido de los clientes.
+			          Esta tabla contiene id de pedido, id de empleado, id de cliente y fecha.
 			        </p>
 			      </div>
 			      <div class="card-footer">

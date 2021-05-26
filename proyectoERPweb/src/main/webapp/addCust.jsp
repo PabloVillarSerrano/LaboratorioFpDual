@@ -6,8 +6,7 @@
 <%@page import= "edu.fpdual.proyectoERP.manager.CustomerManagerC" %>
 
 
-<%
-
+<% 
 String t1=request.getParameter("CustomerId");
 int id = Integer.parseInt(t1);
 
@@ -17,20 +16,19 @@ String t4=request.getParameter("LastName");
 
 Connection con = new Conector().getMySQLConnection();
 
-try (PreparedStatement prepStmt = con.prepareStatement("INSERT INTO Customers (ID,Company, LastName, FirstName) VALUES ( ?, ?, ?, ?)")) {
+try (PreparedStatement prepStmt = con.prepareStatement("INSERT INTO Customers (ID,Company,FirstName, LastName) VALUES ( ?,?,?,?)")) {
 	con.setAutoCommit(false);
 	prepStmt.setInt(1, id);
 	prepStmt.setString(2, t2);
-	prepStmt.setString(4, t3);
-	prepStmt.setString(3, t4);
+	prepStmt.setString(3, t3);
+	prepStmt.setString(4, t4);
 	prepStmt.executeUpdate();
 	con.commit();
 } catch (SQLException e) {
 
 e.printStackTrace();
 }
-
-%>			
+%>	
 
 		
 <html>
@@ -96,8 +94,8 @@ e.printStackTrace();
 	        </a>
 	      </li>
 	      <li class="nav-item mx-3">
-	        <a href="https://www.royalsheepgroup.com/juego" style="color:#fff">
-	            PRODUCTOS
+	        <a href="http://localhost:8080/proyectoERPweb/filterPedidos.jsp" style="color:#fff">
+	            PEDIDOS
 	        </a>
 	      </li>
 	    </ul>
@@ -106,8 +104,8 @@ e.printStackTrace();
 	
 	<main>
 
-		<section class="section text-center py-5" >
-			<div class="py-5 " style="text-align: center; font-family: 'Pattaya', sans-serif;">
+		<section class="mt-5 section text-center py-5">
+			<div class="pt-5 " style="text-align: center; font-family: 'Pattaya', sans-serif;">
 				<span style="font-size: 4em; color: #ed8323">¡Cliente añadido!</span>
 			</div>	
 			
@@ -118,7 +116,7 @@ e.printStackTrace();
 			<p><b>Compañia:</b>
 			   <%= request.getParameter("Company")%>
 			</p>
-			    <p><b>Nombre:</b>
+						<p><b>Nombre:</b>
 			   <%= request.getParameter("FirstName")%>
 			</p>
 				<p><b>Apellido:</b>
@@ -127,7 +125,7 @@ e.printStackTrace();
 			
 			
 		</section>	
-	    <section class="section " >
+	    <section class="section py-5" >
 			<div class="pt-5 text-center" style="text-align: center; font-family: 'Pattaya', sans-serif;">
 				<a href="http://localhost:8080/proyectoERPweb/filterClientes.jsp" style="color:#fff">
 		          <button type="button" class="btn botoncta2 btn-rounded" > 

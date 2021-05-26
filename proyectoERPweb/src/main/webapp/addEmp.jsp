@@ -4,9 +4,12 @@
 <%@page import="java.sql.Connection"%>
 <%@page import="edu.fpdual.proyectoERP.dao.Employees"%>
 <%@page import= "edu.fpdual.proyectoERP.manager.EmployeesManager" %>
+<%@page import= "edu.fpdual.proyectoERPweb.controladores.AddEmpController" %>
 
 
 <%
+
+//	Employees employee = new AddEmpController().findEmployee((String)request.getAttribute("EmployeeId"));
 
 String t1=request.getParameter("EmployeeId");
 int id = Integer.parseInt(t1);
@@ -16,10 +19,9 @@ String t3=request.getParameter("City");
 String t4=request.getParameter("FirstName");
 String t5=request.getParameter("Email");
 
-
 Connection con = new Conector().getMySQLConnection();
 
-try (PreparedStatement prepStmt = con.prepareStatement("INSERT INTO Employees (ID, Company, City, FirstName, Email) VALUES ( ?, ?, ?, ?)")) {
+try (PreparedStatement prepStmt = con.prepareStatement("INSERT INTO Employees (ID,Company,City,FirstName,Email) VALUES ( ?,?,?,?,?)")) {
 	con.setAutoCommit(false);
 	prepStmt.setInt(1, id);
 	prepStmt.setString(2, t2);
@@ -33,6 +35,8 @@ try (PreparedStatement prepStmt = con.prepareStatement("INSERT INTO Employees (I
 
 e.printStackTrace();
 }
+
+
 
 %>			
 
@@ -100,8 +104,8 @@ e.printStackTrace();
 	        </a>
 	      </li>
 	      <li class="nav-item mx-3">
-	        <a href="https://www.royalsheepgroup.com/juego" style="color:#fff">
-	            PRODUCTOS
+	        <a href="http://localhost:8080/proyectoERPweb/filterPedidos.jsp" style="color:#fff">
+	            PEDIDOS
 	        </a>
 	      </li>
 	    </ul>
@@ -115,28 +119,26 @@ e.printStackTrace();
 				<span style="font-size: 4em; color: #ed8323">¡Empleado añadido!</span>
 			</div>	
 			
-			
 			<p><b>Id:</b>
 			   <%= request.getParameter("EmployeeId")%>
 			</p>
 			<p><b>Compañia:</b>
 			   <%= request.getParameter("Company")%>
 			</p>
-			<p><b>Ciudad:</b>
+				<p><b>Ciudad:</b>
 			   <%= request.getParameter("City")%>
 			</p>
-		    <p><b>Nombre:</b>
+				<p><b>Nombre:</b>
 			   <%= request.getParameter("FirstName")%>
 			</p>
-			<p><b>Email:</b>
+				<p><b>Email:</b>
 			   <%= request.getParameter("Email")%>
 			</p>
 			
-			
 		</section>	
-	    <section class="section " >
-			<div class="pt-5 text-center" style="text-align: center; font-family: 'Pattaya', sans-serif;">
-				<a href="http://localhost:8080/proyectoERPweb/filterEmpleados.jsp" style="color:#fff">
+	    <section class="section  text-center" >
+			<div class="pt-5 " style="text-align: center; font-family: 'Pattaya', sans-serif;">
+				<a href="filterEmpleados.jsp" style="color:#fff">
 		          <button type="button" class="btn botoncta2 btn-rounded" > 
 		            Volver al listado
 		          </button>
