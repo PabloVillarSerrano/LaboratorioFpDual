@@ -17,12 +17,16 @@ import java.util.stream.Collectors;
 
 import edu.fpdual.proyectoERP.dao.Employees;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class EmployeesManager.
+ */
 public class EmployeesManager {
 	
 	
 	/**
-	 * Finds all the employees in the DB
-	 * 
+	 * Finds all the employees in the DB.
+	 *
 	 * @param con DB connection
 	 * @return a {@link List} of {@link Employees}
 	 */
@@ -48,9 +52,10 @@ public class EmployeesManager {
 
 	/**
 	 * Fills all the countries for each city.
+	 *
 	 * @param con the Db connection
-	 * @param countries the map of cities and countries.
-	 * @param cities the list of cities to update.
+	 * @param prefix the prefix
+	 * @return the list
 	 */
 //	private void fillCountries(Connection con, Map<Integer, String> countries, List<Employees> cities) {
 //		//Obtains all the country codes to search
@@ -101,10 +106,11 @@ public class EmployeesManager {
     }
 	
 	/**
-	 * Me busca un empleado indicándole un nombre
-	 * @param con
-	 * @param name
-	 * @return
+	 * Me busca un empleado indicándole un nombre.
+	 *
+	 * @param con the con
+	 * @param firstName the first name
+	 * @return the employees
 	 */
 	public Employees FindName(Connection con, String firstName) {
 
@@ -137,10 +143,11 @@ public class EmployeesManager {
     }
 
 	/**
-	 * para buscar por el ID de ciudad
-	 * @param con
-	 * @param id
-	 * @return
+	 * para buscar por el ID de ciudad.
+	 *
+	 * @param con the con
+	 * @param id the id
+	 * @return the employees
 	 */
 	public Employees findID(Connection con, int id) {
 		
@@ -170,6 +177,14 @@ public class EmployeesManager {
 		}
 		
 	}
+	
+	/**
+	 * Find ID emp.
+	 *
+	 * @param con the con
+	 * @param idEmpleado the id empleado
+	 * @return the employees
+	 */
 	public Employees findIDEmp(Connection con, int idEmpleado) {
 
         String consulta = ("SELECT ID,Company,City, FirstName FROM Employees WHERE ID=?");
@@ -194,6 +209,13 @@ public class EmployeesManager {
         }
     }
 	
+	/**
+	 * Find by ID.
+	 *
+	 * @param con the con
+	 * @param idEmpleado the id empleado
+	 * @return the employees
+	 */
 	public Employees findByID(Connection con, int idEmpleado) {
  
 
@@ -227,10 +249,11 @@ public class EmployeesManager {
 	
 	
 	/**
-	 * Para actualizar la poblacion de un pais teniendo su id 
-	 * @param con
-	 * @param id
-	 * @param population
+	 * Para actualizar la poblacion de un pais teniendo su id .
+	 *
+	 * @param con the con
+	 * @param id the id
+	 * @param population the population
 	 */
 	public void update(Connection con, int id, BigDecimal population) {
 	
@@ -250,11 +273,12 @@ public class EmployeesManager {
 	}
 	
 	/**
-	 * para introducir ciudades en la DB
-	 * @param con
-	 * @param name
-	 * @param district
-	 * @param population
+	 * para introducir ciudades en la DB.
+	 *
+	 * @param con the con
+	 * @param name the name
+	 * @param district the district
+	 * @param population the population
 	 */
 	public void insert(Connection con, String name, String district, BigDecimal population) {
 		
@@ -278,9 +302,10 @@ public class EmployeesManager {
 	}
 	
 	/**
-	 * para borrar ciudades por su id 
-	 * @param con
-	 * @param id
+	 * para borrar ciudades por su id .
+	 *
+	 * @param con the con
+	 * @param id the id
 	 */
 	public void delete(Connection con, int id) {
 		
@@ -300,6 +325,16 @@ public class EmployeesManager {
 	}
 	
 
+	/**
+	 * Adds the employee.
+	 *
+	 * @param con the con
+	 * @param idEmpleado the id empleado
+	 * @param company the company
+	 * @param city the city
+	 * @param firstName the first name
+	 * @param email the email
+	 */
 	// ADD EMPLOYEE
 	    public void addEmployee(Connection con, int idEmpleado, String company, String city, String firstName,
 	            String email) {
@@ -323,6 +358,12 @@ public class EmployeesManager {
 
 	 
 
+	/**
+	 * Delete employee.
+	 *
+	 * @param con the con
+	 * @param idEmpleado the id empleado
+	 */
 	//DELETE EMPLOYEE
 	    public void deleteEmployee(Connection con, int idEmpleado) {
 	        try (PreparedStatement prepStmt = con.prepareStatement("DELETE FROM Employees WHERE ID = ?")) {

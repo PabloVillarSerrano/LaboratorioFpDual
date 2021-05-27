@@ -11,7 +11,18 @@ import java.util.List;
 
 import edu.fpdual.proyectoERP.dao.Customer;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class CustomerManagerC.
+ */
 public class CustomerManagerC {
+	
+	/**
+	 * Find all.
+	 *
+	 * @param con the con
+	 * @return the list
+	 */
 	// List customers
 	public List<Customer> findAll(Connection con) {
 		try (Statement stmt = con.createStatement()) {
@@ -31,6 +42,15 @@ public class CustomerManagerC {
 		}
 	}
 
+	/**
+	 * Adds the customer.
+	 *
+	 * @param con the con
+	 * @param customerId the customer id
+	 * @param company the company
+	 * @param firstName the first name
+	 * @param lastName the last name
+	 */
 	public void addCustomer(Connection con, int customerId, String company, String firstName, String lastName) {
 		try (PreparedStatement prepStmt = con
 				.prepareStatement("INSERT INTO Customers (ID,Company, Last_Name, First_Name) VALUES ( ?, ?, ?,?)")) {
@@ -48,6 +68,12 @@ public class CustomerManagerC {
 		}
 	}
 	
+	/**
+	 * Delete customer.
+	 *
+	 * @param con the con
+	 * @param customerId the customer id
+	 */
 	public void deleteCustomer(Connection con, int customerId) {
 		try (PreparedStatement prepStmt = con.prepareStatement("DELETE FROM Customers WHERE ID = ?")) {
 			con.setAutoCommit(false);
@@ -62,6 +88,14 @@ public class CustomerManagerC {
 		}
 
 	}
+	
+	/**
+	 * Find by ID.
+	 *
+	 * @param con the con
+	 * @param customerId the customer id
+	 * @return the customer
+	 */
 	public Customer findByID(Connection con, int customerId) {
         String consulta = ("SELECT * FROM Customers WHERE ID=?");
 
@@ -92,6 +126,14 @@ public class CustomerManagerC {
             return null;
         }
     }
+	
+	/**
+	 * Update customer.
+	 *
+	 * @param con the con
+	 * @param customer the customer
+	 * @throws SQLException the SQL exception
+	 */
 	public void updateCustomer(Connection con, Customer customer) throws SQLException {
 
 		 

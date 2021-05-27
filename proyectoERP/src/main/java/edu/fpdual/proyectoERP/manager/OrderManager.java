@@ -11,7 +11,18 @@ import java.util.List;
 
 import edu.fpdual.proyectoERP.dao.Order;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class OrderManager.
+ */
 public class OrderManager {
+	
+	/**
+	 * Find all.
+	 *
+	 * @param con the con
+	 * @return the list
+	 */
 	public List<Order> findAll(Connection con) {
 		try (Statement stmt = con.createStatement()) {
 			ResultSet result = stmt.executeQuery("SELECT * FROM Orders ORDER BY OrderID");
@@ -30,6 +41,12 @@ public class OrderManager {
 		}
 	}
 
+	/**
+	 * Find all 2.
+	 *
+	 * @param con the con
+	 * @return the list
+	 */
 	public List<Order> findAll2(Connection con) {
 
 		try (Statement stmt = con.createStatement()) {
@@ -52,6 +69,13 @@ public class OrderManager {
 
 	
 
+	/**
+	 * Find by employee id.
+	 *
+	 * @param con the con
+	 * @param idEmpleado the id empleado
+	 * @return the list
+	 */
 	public List<Order> findByEmployeeId(Connection con, int idEmpleado) {
 		try {
 			PreparedStatement stmt = con.prepareStatement(
@@ -74,6 +98,13 @@ public class OrderManager {
 		}
 	}
 
+	/**
+	 * Find by customer id.
+	 *
+	 * @param con the con
+	 * @param idCustomer the id customer
+	 * @return the list
+	 */
 	public List<Order> findByCustomerId(Connection con, int idCustomer) {
 		try {
 			PreparedStatement stmt = con.prepareStatement(
@@ -96,6 +127,15 @@ public class OrderManager {
 		}
 	}
 
+	/**
+	 * Adds the order.
+	 *
+	 * @param con the con
+	 * @param orderId the order id
+	 * @param employeeId the employee id
+	 * @param customerId the customer id
+	 * @param orderDate the order date
+	 */
 	public void addOrder(Connection con, int orderId, int employeeId, int customerId, String orderDate) {
 		try (PreparedStatement prepStmt = con.prepareStatement(
 				"INSERT INTO Orders (OrderID, EmployeeID, CustomerID, OrderDate) VALUES ( ?, ?, ?,?)")) {
@@ -115,6 +155,12 @@ public class OrderManager {
 		}
 	}
 
+	/**
+	 * Delete order.
+	 *
+	 * @param con the con
+	 * @param orderId the order id
+	 */
 	public void deleteOrder(Connection con, int orderId) {
 		try (PreparedStatement prepStmt = con.prepareStatement("DELETE FROM Orders WHERE OrderID = ?")) {
 			con.setAutoCommit(false);
@@ -130,6 +176,13 @@ public class OrderManager {
 
 	}
 
+	/**
+	 * Update order.
+	 *
+	 * @param con the con
+	 * @param order the order
+	 * @throws SQLException the SQL exception
+	 */
 	public void updateOrder(Connection con, Order order) throws SQLException {
 
 		PreparedStatement prepStmt = con
