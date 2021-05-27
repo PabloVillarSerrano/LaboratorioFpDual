@@ -17,8 +17,8 @@ public class Employees {
 	int id;
 	String Company;
 //	String country;
-//	String LName;
-//	String Email;
+	String FirstName;
+	String Email;
 	String City;
 	
 	/**
@@ -32,9 +32,9 @@ public class Employees {
 		try {
 			this.id = result.getInt("ID");
 			this.Company = result.getString("Company");
-//			this.LName = result.getString("Last Name");
-//			this.Email = result.getString("E-mail Address");
 			this.City = result.getString("City");
+			this.FirstName = result.getString("FirstName");
+			this.Email = result.getString("Email");
 
 			
 		}catch (SQLException e) {
